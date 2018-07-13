@@ -19,26 +19,11 @@ but this hasn't been fixed yet.
 Build Image
 -----------
 
-    $ docker build -t dajobe/hbase .
-
-
-Pull image
-----------
-
-If you want to pull the image already built then use this
-
-    $ docker pull dajobe/hbase
-
-More details at https://hub.docker.com/r/dajobe/hbase/
+    $ docker build -t hbase-docker .
 
 
 Run HBase
 ---------
-
-To run HBase by hand:
-
-    $ mkdir data
-    $ id=$(docker run --name=hbase-docker -h hbase-docker -d -v $PWD/data:/data dajobe/hbase)
 
 To run it and adjust the host system's locally by editing
 `/etc/hosts` to alias the DNS hostname 'hbase-docker' to the

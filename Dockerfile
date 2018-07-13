@@ -4,12 +4,12 @@
 
 # http://docs.docker.io/en/latest/use/builder/
 
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 MAINTAINER Dave Beckett <dave@dajobe.org>
 
 COPY *.sh /build/
 
-ENV HBASE_VERSION 1.2.4
+ENV HBASE_VERSION 1.4.5
 
 RUN /build/prepare-hbase.sh && \
     cd /opt/hbase && /build/build-hbase.sh \
